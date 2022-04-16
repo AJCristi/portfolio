@@ -7,7 +7,8 @@ import { Icon } from '@iconify/react';
 const useStyles = makeStyles((theme) => ({
     typedContainer: {
         width: "100%",
-        padding: "40px 0px"
+        padding: "40px 0px",
+        backgroundColor: "#EFEFEE"
     },
     description: {
         textAlign: "justify",

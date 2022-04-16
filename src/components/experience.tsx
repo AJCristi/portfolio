@@ -6,7 +6,7 @@ import { Box, Stack } from '@mui/material';
 const useStyles = makeStyles((theme) => ({
     typedContainer: {
         width: "100%",
-        backgroundColor: "#e9d5a1",
+        backgroundColor: "#EFEFEE",
         display: 'flex',
         flexDirection: 'column',
     },

@@ -10,7 +10,8 @@ const useStyles = makeStyles((theme) => ({
     typedContainer: {
         height: "100vh",
         width: "100%",
-        backgroundColor: "#e9d5a1",
+        backgroundColor: "#3F3840",
+        color: "white",
         display: 'flex',
         flexDirection: 'column',
     },

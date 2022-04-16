@@ -23,21 +23,43 @@ import { Carousel } from 'react-responsive-carousel';
 import ReactPlayer from 'react-player'
 
 import testimg from '../contents/img/testimg.png'
+import vista_preview from '../contents/img/vista/vista-preview.png'
+import vista_1 from '../contents/img/vista/vista-1.png';
+import vista_2 from '../contents/img/vista/vista-2.png';
+import vista_3 from '../contents/img/vista/vista-3.png';
+import vista_4 from '../contents/img/vista/vista-4.png';
+import vista_5 from '../contents/img/vista/vista-5.png';
+
+import rampv_preview from '../contents/img/rampver/rampv-preview.png'
+import rampv_1 from '../contents/img/rampver/rampver-1.png';
+import rampv_2 from '../contents/img/rampver/rampver-2.png';
+import rampv_3 from '../contents/img/rampver/rampver-3.png';
+import rampv_4 from '../contents/img/rampver/rampver-4.png';
+import rampv_5 from '../contents/img/rampver/rampver-5.png';
+import rampv_6 from '../contents/img/rampver/rampver-6.png';
+import rampv_7 from '../contents/img/rampver/rampver-7.png';
+import rampv_8 from '../contents/img/rampver/rampver-8.png';
+import rampv_9 from '../contents/img/rampver/rampver-9.png';
+import rampv_10 from '../contents/img/rampver/rampver-10.png';
 
 const useStyles = makeStyles((theme) => ({
     typedContainer: {
         width: "100%",
         padding: "40px 0px",
-        background: '#1F1F1F',
+        background: '#3F3840',
         color: 'white',
     },
     projCard: {
         maxWidth: '345px',
         height: '350px',
-        padding: "5px",
+        padding: "10px",
     },
     cardIcon: {
         fontSize: '28px'
+    },
+    mobilePreview: {
+        height: '600px',
+        width: 'auto !important',
     }
 }));
 
@@ -73,7 +95,7 @@ function Projects() {
                 <CardMedia
                     component="img"
                     height="194"
-                    image={testimg}
+                    image={rampv_preview}
                     alt="project image"
                 />
                 <CardContent>
@@ -115,7 +137,7 @@ function Projects() {
                 <CardMedia
                     component="img"
                     height="194"
-                    image={testimg}
+                    image={vista_preview}
                     alt="project image"
                 />
                 <CardContent>
@@ -146,7 +168,7 @@ function Projects() {
                     <Grid container justifyContent="flex-end">
                         <IconButton
                             aria-label="Back"
-                            onClick={() => {setOpenProject(false); setCurProject("")}}
+                            onClick={() => { setOpenProject(false); setCurProject("") }}
                         >
                             <Icon icon="akar-icons:circle-x" color="white" />
                         </IconButton>
@@ -155,12 +177,34 @@ function Projects() {
                 <Grid item xs={6}>
                     <Carousel>
                         <div>
-                            <ReactPlayer url='https://www.youtube.com/watch?v=0jG8cE2A7R8' />
-
+                            <img src={rampv_1} alt="preview-1"></img>
                         </div>
                         <div>
-                            <img src={testimg} alt="preview-1"></img>
-                            <p className="legend">Legend 1</p>
+                            <img src={rampv_2} alt="preview-2"></img>
+                        </div>
+                        <div>
+                            <img src={rampv_3} alt="preview-3"></img>
+                        </div>
+                        <div>
+                            <img src={rampv_4} alt="preview-4"></img>
+                        </div>
+                        <div>
+                            <img src={rampv_5} alt="preview-5"></img>
+                        </div>
+                        <div>
+                            <img src={rampv_6} alt="preview-6"></img>
+                        </div>
+                        <div>
+                            <img src={rampv_7} alt="preview-7"></img>
+                        </div>
+                        <div>
+                            <img src={rampv_8} alt="preview-8"></img>
+                        </div>
+                        <div>
+                            <img src={rampv_9} alt="preview-9"></img>
+                        </div>
+                        <div>
+                            <img src={rampv_10} alt="preview-10"></img>
                         </div>
                     </Carousel>
                 </Grid>
@@ -194,7 +238,7 @@ function Projects() {
                                     The database is a NoSQL database using Google Firestore connected using said cloud functions.
                                 </span>
                                 <span style={{ marginTop: '10px', textAlign: "justify" }}>
-                                    The site is also hosted using Google Firebase and Google Cloud Platform.
+                                    The site is also hosted using Google Firebase and Google Cloud Platform. Application is configured as well to be a Progressive Web App (PWA).
                                 </span>
                             </Grid>
                         </Grid>
@@ -213,20 +257,30 @@ function Projects() {
                     <Grid container justifyContent="flex-end">
                         <IconButton
                             aria-label="Back"
-                            onClick={() => {setOpenProject(false); setCurProject("")}}
+                            onClick={() => { setOpenProject(false); setCurProject("") }}
                         >
                             <Icon icon="akar-icons:circle-x" color="white" />
                         </IconButton>
                     </Grid>
                 </Grid>
                 <Grid item xs={6}>
-                    <Carousel>
+                    <Carousel
+                        showThumbs={false}
+                    >
                         <div>
-                            <ReactPlayer url='https://www.youtube.com/watch?v=0jG8cE2A7R8' />
+                            <img src={vista_1} alt="preview-1" className={classes.mobilePreview}></img>
                         </div>
                         <div>
-                            <img src={testimg} alt="preview-1"></img>
-                            <p className="legend">Legend 1</p>
+                            <img src={vista_2} alt="preview-2" className={classes.mobilePreview}></img>
+                        </div>
+                        <div>
+                            <img src={vista_3} alt="preview-3" className={classes.mobilePreview}></img>
+                        </div>
+                        <div>
+                            <img src={vista_4} alt="preview-4" className={classes.mobilePreview}></img>
+                        </div>
+                        <div>
+                            <img src={vista_5} alt="preview-5" className={classes.mobilePreview}></img>
                         </div>
                     </Carousel>
                 </Grid>
@@ -234,11 +288,11 @@ function Projects() {
                     <Grid container justifyContent="flex-start" sx={{ marginLeft: "20px" }}>
                         <Grid item xs={12}>
                             <h3 style={{ width: '100%' }}>Ticket Scanner</h3>
-                        </Grid>                        
+                        </Grid>
                         <Grid item xs={12} sx={{ paddingTop: '10px' }}>
                             <Grid container justifyContent="flex-start" sx={{ marginLeft: "20px" }}>
                                 <span style={{ textAlign: "justify" }}>
-                                    Web-based ticket scanner to assist movie employees to scan and validate tickets for cinema entry. 
+                                    Web-based ticket scanner to assist movie employees to scan and validate tickets for cinema entry.
                                     Main features are:
                                 </span>
                                 <ul style={{ marginTop: '10px', textAlign: "left" }}>
@@ -246,9 +300,9 @@ function Projects() {
                                         Scanner which uses a mobile phone camera in verifying tickets using QR codes. User is able to validate ticket numbers using a ticket number or a QR code.
                                     </li>
                                     <li>
-                                        Front-end is build React.js and Javascript. Back-end is built with Node.js. 
+                                        Front-end is build React.js and Javascript. Back-end is built with Node.js.
                                     </li>
-                                </ul>                                
+                                </ul>
                                 <span style={{ marginTop: '10px', textAlign: "justify" }}>
                                     App is deployed and hosted with Microsoft IIS on the cinema partner's internal servers for employees.
                                 </span>

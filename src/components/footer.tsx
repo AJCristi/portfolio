@@ -7,7 +7,7 @@ const useStyles = makeStyles((theme) => ({
     typedContainer: {
         width: "100%",
         padding: "40px 0px",
-        background: '#1F1F1F',
+        background: '#3F3840',
         color: 'white',
     },
     centered: {
