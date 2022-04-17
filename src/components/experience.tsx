@@ -22,6 +22,10 @@ function Experience() {
     }, {
         title: "- Grad. 2019",
         cardTitle: "",
+    },
+    {
+        title: "April - Sept. 2018",
+        cardTitle: "",
     }];
 
     return (
@@ -77,6 +81,13 @@ function Experience() {
                         <h4>BS Information Technology (with specialization in Game Design and Development)</h4>
                         <span style={{ textAlign: "justify" }}>
                             Learned C# and Javascript in conjunction with learning best software development practices. Created 2 games as capstone/thesis projects.
+                        </span>                        
+                    </div>
+                    <div style={{ width: '100%' }}>
+                        <h2>Intercommerce Inc.</h2>
+                        <h4>Software Developer Internship</h4>
+                        <span style={{ textAlign: "justify" }}>
+                            Tasked with creating working mockups of website desgins using Javascript. Assisted in creating a working Android application in Java with MySQL database in mind.
                         </span>                        
                     </div>
                 </Chrono>

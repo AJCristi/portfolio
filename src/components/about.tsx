@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
         padding: "20px 300px"
     },
     descText: {
-        fontSize: "24px", 
+        fontSize: "24px",
         fontWeight: '300',
         lineHeight: '1.6'
     },
@@ -32,11 +32,15 @@ function About() {
                 <span className={classes.descText}>
                     Hi! If you're reading this then you've found my portfolio. I'm Alex, a fullstack software dev from the Philippines.
                 </span>
-                <br/> <br/>
+                <br /> <br />
                 <span className={classes.descText}>
-                    I'm an aviation nerd and tech of course! Below are my projects and experiences, feel free to browse!
+                    I'm an aviation nerd and tech of course! My main tech stack is using React.js, Javascript, Node.js, Google Cloud Platform/Firebase, and I'm always eager to learn more~!
                 </span>
-            </Box>            
+                <br /><br />
+                <span className={classes.descText}>
+                    Below are the projects I've worked on and my working experience.
+                </span>
+            </Box>
         </Box>
     )
 }
