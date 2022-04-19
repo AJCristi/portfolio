@@ -24,7 +24,7 @@ function Experience() {
         cardTitle: "",
     },
     {
-        title: "April - Sept. 2018",
+        title: "March - Oct. 2018",
         cardTitle: "",
     }];
 
@@ -87,7 +87,9 @@ function Experience() {
                         <h2>Intercommerce Inc.</h2>
                         <h4>Software Developer Internship</h4>
                         <span style={{ textAlign: "justify" }}>
-                            Tasked with creating working mockups of website desgins using Javascript. Assisted in creating a working Android application in Java with MySQL database in mind.
+                            Tasked with creating working mockups of website designs using Javascript, HTML, and CSS.
+                            
+                            Assisted in creating a working Android application in Java with MySQL database in mind.
                         </span>                        
                     </div>
                 </Chrono>
