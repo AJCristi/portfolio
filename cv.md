@@ -1,7 +1,5 @@
 # Alex Cristi
 
-![Profile Photo](https://github.com/AJCristi.png)
-
 **Location:** Manila, Philippines  
 **Email:** ajcristi96@gmail.com  
 **Phone:** +63 905 268 1007  
@@ -12,7 +10,7 @@
 
 ## Professional Summary
 
-Full Stack Software Engineer with 5+ years of experience building and scaling web applications. Currently part-leading a frontend team at Samsung R&D Philippines, where I spearhead a large-scale internal platforms used for training LLMs across multiple divisions. Proven track record in delivering end-to-end solutions—from architecting NoSQL databases on GCP to developing multi-platform applications with React, TypeScript, and Node.js. Passionate about clean code, mentoring teams, and turning complex requirements into reliable, user-focused products.
+Full Stack Software Engineer with 5+ years of experience building and scaling web applications. Currently part-leading a frontend team at Samsung R&D Philippines, where I spearhead a large-scale internal platforms used for training LLMs across multiple divisions. Proven track record in delivering end-to-end solutions from architecting NoSQL databases on GCP to developing multi-platform applications with React, TypeScript, and Node.js.
 
 ---
 
@@ -65,7 +63,7 @@ Enterprise-grade internal machine learning platform designed for training and fi
 
 ---
 
-### Rampver Digital Investment Platform
+### [Rampver Digital Investment Platform](app.rampver.com)
 **Tech Stack:** JavaScript, React.js, Next.js, Node.js, Firebase, GCP
 
 Comprehensive digital investment platform for Rampver Financials, one of the Philippines' growing investment companies. The platform consists of three interconnected modules: a client-facing portal for investors to view portfolios, track performance, and request transactions; an administrative CMS for back-office operations; and an agent dashboard for financial advisors to manage client relationships. Built with a serverless architecture on Google Cloud Platform, featuring real-time data synchronization, secure document storage, and automated notification systems.
