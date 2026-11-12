@@ -151,23 +151,25 @@
   .timeline > li:first-child { border-top: 0; padding-top: 0; }
   .when { font: 400 0.8125rem/1.9 var(--mono); color: var(--muted); font-variant-numeric: tabular-nums; }
   .org { margin: 2px 0 0; color: var(--muted); }
-  .timeline ul { margin: 14px 0 0; padding-left: 1.1em; max-width: 68ch; }
-  .timeline ul li { padding-left: 0.25em; }
-  .timeline ul li + li { margin-top: 6px; }
-  .timeline ul li::marker { color: var(--line-strong); }
-  .timeline p.note { margin: 12px 0 0; max-width: 68ch; }
+  .prose { max-width: 68ch; }
+  .prose p { margin: 14px 0 0; }
+  .prose ul { margin: 14px 0 0; padding-left: 1.1em; }
+  .prose li { padding-left: 0.25em; }
+  .prose li + li { margin-top: 6px; }
+  .prose li::marker { color: var(--line-strong); }
+  .prose strong { font-weight: 600; }
+  .status { margin: 0; font: 400 0.875rem/1.6 var(--mono); color: var(--muted); }
 
   .project {
-    display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr); gap: 40px; align-items: center;
+    display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px; align-items: start;
     padding-block: 40px; border-top: 1px solid var(--line);
   }
-  .project:first-of-type { border-top: 0; padding-top: 0; }
+  .project:first-child { border-top: 0; padding-top: 0; }
   .project.text-only { grid-template-columns: minmax(0, 1fr); }
-  .project.text-only .desc { max-width: 68ch; }
   .project.phone { grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); }
+  .project .shot { position: sticky; top: 24px; }
   .stack { margin: 8px 0 0; font: 400 0.8125rem/1.6 var(--mono); color: var(--accent-text); }
-  .desc { margin: 14px 0 0; }
-  .meta { margin: 14px 0 0; font: 400 0.8125rem/1.6 var(--mono); color: var(--muted); }
+  .meta { margin: 6px 0 0; font: 400 0.8125rem/1.6 var(--mono); color: var(--muted); }
 
   .shot { margin: 0; }
   .shot img { display: block; width: 100%; height: auto; }
@@ -193,6 +195,7 @@
     .timeline > li { grid-template-columns: 1fr; }
     .project, .project.phone { grid-template-columns: minmax(0, 1fr); gap: 28px; }
     .project.phone .shot { order: 1; }
+    .project .shot { position: static; }
   }
 </style>
 </head>
@@ -216,105 +219,23 @@
         <span>alex — zsh</span>
       </div>
       <pre class="term"><code class="art" aria-hidden="true"><span style="--i:0"> █████<b>╗</b> ██<b>╗</b>     ███████<b>╗</b>██<b>╗</b>  ██<b>╗</b></span><span style="--i:1">██<b>╔══</b>██<b>╗</b>██<b>║</b>     ██<b>╔════╝╚</b>██<b>╗</b>██<b>╔╝</b></span><span style="--i:2">███████<b>║</b>██<b>║</b>     █████<b>╗</b>   <b>╚</b>███<b>╔╝</b></span><span style="--i:3">██<b>╔══</b>██<b>║</b>██<b>║</b>     ██<b>╔══╝</b>   ██<b>╔</b>██<b>╗</b></span><span style="--i:4">██<b>║</b>  ██<b>║</b>███████<b>╗</b>███████<b>╗</b>██<b>╔╝</b> ██<b>╗</b></span><span style="--i:5"><b>╚═╝</b>  <b>╚═╝╚══════╝╚══════╝╚═╝</b>  <b>╚═╝</b></span><span style="--i:6"> </span><span style="--i:7"> ██████<b>╗</b>██████<b>╗</b> ██<b>╗</b>███████<b>╗</b>████████<b>╗</b>██<b>╗</b></span><span style="--i:8">██<b>╔════╝</b>██<b>╔══</b>██<b>╗</b>██<b>║</b>██<b>╔════╝╚══</b>██<b>╔══╝</b>██<b>║</b></span><span style="--i:9">██<b>║</b>     ██████<b>╔╝</b>██<b>║</b>███████<b>╗</b>   ██<b>║</b>   ██<b>║</b></span><span style="--i:10">██<b>║</b>     ██<b>╔══</b>██<b>╗</b>██<b>║╚════</b>██<b>║</b>   ██<b>║</b>   ██<b>║</b></span><span style="--i:11"><b>╚</b>██████<b>╗</b>██<b>║</b>  ██<b>║</b>██<b>║</b>███████<b>║</b>   ██<b>║</b>   ██<b>║</b></span><span style="--i:12"> <b>╚═════╝╚═╝</b>  <b>╚═╝╚═╝╚══════╝</b>   <b>╚═╝</b>   <b>╚═╝</b></span></code><span class="prompt">~ $</span> whoami
-<span class="out">frontend engineer · part-lead @ samsung r&amp;d philippines</span>
+<span class="out" id="headline">loading cv.md…</span>
 <span class="prompt">~ $</span> <span class="cursor" aria-hidden="true"></span></pre>
     </div>
 
     <div class="intro">
-      <p>I build the interface for an internal machine-learning platform at Samsung R&amp;D Philippines. Before that I shipped a fintech platform and a cinema ticket scanner end to end. Based in Manila.</p>
-      <div class="actions">
-        <a class="button primary" href="mailto:ajcristi96@gmail.com">Email me</a>
-        <a class="button" href="https://github.com/AJCristi">GitHub</a>
-        <a class="button" href="https://www.linkedin.com/in/alex-cristi-0bb9bb1a2/">LinkedIn</a>
-      </div>
+      <p id="summary"></p>
+      <div class="actions" id="links"></div>
     </div>
 
     <section id="experience" aria-labelledby="experience-title">
       <h2 id="experience-title">Experience</h2>
-      <ol class="timeline">
-        <li>
-          <span class="when">2022 – now</span>
-          <div>
-            <h3>Frontend Software Engineer, Part-Lead</h3>
-            <p class="org">Samsung R&amp;D Philippines · Taguig</p>
-            <ul>
-              <li>Lead frontend development for an internal ML platform that several Samsung divisions use to train large language models.</li>
-              <li>Migrated a large legacy JavaScript app to TypeScript and modern React with teams in Korea, Canada, the UK and Poland.</li>
-              <li>Cut initial load time on a legacy product by 40% with code splitting, lazy loading and caching.</li>
-              <li>Interview frontend candidates, onboard new hires and run knowledge-transfer sessions.</li>
-            </ul>
-          </div>
-        </li>
-        <li>
-          <span class="when">2020 – 2021</span>
-          <div>
-            <h3>Full Stack Software Engineer</h3>
-            <p class="org">MobileGroup Inc. · Makati</p>
-            <ul>
-              <li>Built Rampver Online, a three-module investment platform on React and Firebase that onboarded 3,000+ users in its first year.</li>
-              <li>Designed its Firestore schema and serverless API on Google Cloud Functions.</li>
-              <li>Moved it to a shared Next.js and React Native codebase for web, iOS and Android.</li>
-              <li>Built a QR ticket scanner for Vista Cinemas and maintained a C# .NET point-of-sale system.</li>
-            </ul>
-          </div>
-        </li>
-        <li>
-          <span class="when">2019</span>
-          <div>
-            <h3>BS Information Technology</h3>
-            <p class="org">De La Salle – College of Saint Benilde · Game Design and Development</p>
-            <p class="note">Shipped two games as capstone and thesis projects in C# and JavaScript.</p>
-          </div>
-        </li>
-        <li>
-          <span class="when">2018</span>
-          <div>
-            <h3>Software Developer Intern</h3>
-            <p class="org">Intercommerce Inc.</p>
-            <p class="note">Built working website mockups in HTML, CSS and JavaScript, and helped build an Android app in Java backed by MySQL.</p>
-          </div>
-        </li>
-      </ol>
+      <ol class="timeline" id="timeline"><li><p class="status">loading cv.md…</p></li></ol>
     </section>
 
     <section id="projects" aria-labelledby="projects-title">
       <h2 id="projects-title">Projects</h2>
-
-      <article class="project text-only">
-        <div>
-          <h3>Samsung machine-learning platform</h3>
-          <p class="stack">TypeScript · React · Node.js · MariaDB · Docker</p>
-          <p class="desc">An internal platform where data scientists upload datasets, configure and monitor training runs, and share models across teams. I architected the real-time training-metrics dashboard, the dataset upload flow with validation and progress, and model sharing between teams.</p>
-          <p class="meta">internal tool · no public screenshots</p>
-        </div>
-      </article>
-
-      <article class="project">
-        <div>
-          <h3>Rampver Online</h3>
-          <p class="stack">JavaScript · React · Next.js · Node.js · Firebase · GCP</p>
-          <p class="desc">A digital investment platform for Rampver Financials: a client portal for investing in and redeeming mutual funds, an agent dashboard for financial advisors, and an admin CMS for KYC approval and fund management. Serverless on Google Cloud.</p>
-          <p class="meta"><a href="https://app.rampver.com">app.rampver.com</a></p>
-        </div>
-        <figure class="shot browser window">
-          <div class="titlebar" aria-hidden="true">
-            <span class="lights"><i></i><i></i><i></i></span>
-            <span>app.rampver.com</span>
-          </div>
-          <img src="img/rampver-dashboard.webp" width="1600" height="813" loading="lazy" alt="Rampver Online investment history page: a fund summary with shares and market value beside a table of approved and declined transactions.">
-        </figure>
-      </article>
-
-      <article class="project phone">
-        <div>
-          <h3>Vista Cinemas ticket scanner</h3>
-          <p class="stack">JavaScript · React · Material UI · Node.js · Express · MySQL</p>
-          <p class="desc">A progressive web app that lets cinema staff validate digital or printed tickets with the phone camera, with manual entry as a fallback and offline sync for patchy networks. It took validation from about 15 seconds to under 3.</p>
-        </div>
-        <figure class="shot device">
-          <img src="img/vista-scanner.webp" width="540" height="739" loading="lazy" alt="Vista Cinemas QR scanner sign-in screen with username, password and branch fields.">
-        </figure>
-      </article>
+      <div id="project-list"><p class="status">loading cv.md…</p></div>
     </section>
 
     <section id="contact" class="contact" aria-labelledby="contact-title">
@@ -324,15 +245,165 @@
           <span class="lights"><i></i><i></i><i></i></span>
           <span>alex — contact</span>
         </div>
-        <pre class="term"><span class="prompt">~ $</span> contact --all
-<span class="out">email    </span> <a href="mailto:ajcristi96@gmail.com">ajcristi96@gmail.com</a>
-<span class="out">github   </span> <a href="https://github.com/AJCristi">github.com/AJCristi</a>
-<span class="out">linkedin </span> <a href="https://www.linkedin.com/in/alex-cristi-0bb9bb1a2/">linkedin.com/in/alex-cristi</a></pre>
+        <pre class="term" id="contact-term"><span class="prompt">~ $</span> contact --all</pre>
       </div>
     </section>
+    <noscript><p class="status">This page renders from <a href="cv.md">cv.md</a>, which needs JavaScript. Read it directly instead.</p></noscript>
   </main>
 
   <footer>© 2026 Alex Cristi · Manila, Philippines</footer>
 </div>
+<script type="module">
+  try {
+    const response = await fetch("cv.md", { cache: "no-cache" });
+    if (!response.ok) throw new Error(`cv.md responded ${response.status}`);
+    renderCv(parseCv(await response.text()));
+  } catch (error) {
+    console.error(error);
+    const failure = 'Couldn\'t load cv.md. <a href="https://github.com/AJCristi/portfolio/blob/main/cv.md">Read it on GitHub</a>.';
+    document.getElementById("headline").textContent = "error: cv.md not found";
+    document.getElementById("timeline").innerHTML = `<li><p class="status">${failure}</p></li>`;
+    document.getElementById("project-list").innerHTML = `<p class="status">${failure}</p>`;
+  }
+
+  function parseCv(markdown) {
+    const cv = { name: "", headline: "", sections: {} };
+    let section = null;
+    let entry = null;
+    for (const line of markdown.replace(/<!--[\s\S]*?-->/g, "").split(/\r?\n/)) {
+      if (line.startsWith("# ")) cv.name = line.slice(2).trim();
+      else if (line.startsWith("## ")) {
+        section = { lines: [], entries: [] };
+        cv.sections[line.slice(3).trim()] = section;
+        entry = null;
+      } else if (line.startsWith("### ")) {
+        entry = { title: line.slice(4).trim(), lines: [] };
+        section?.entries.push(entry);
+      } else if (entry) entry.lines.push(line);
+      else if (section) section.lines.push(line);
+      else if (line.trim() && !cv.headline) cv.headline = line.trim();
+    }
+    return cv;
+  }
+
+  function splitIntoBlocks(lines) {
+    const blocks = [];
+    for (const line of lines) {
+      const text = line.trim();
+      const previous = blocks.at(-1);
+      if (!text) blocks.push(null);
+      else if (text.startsWith("- ")) {
+        if (previous?.type === "list") previous.items.push(text.slice(2));
+        else blocks.push({ type: "list", items: [text.slice(2)] });
+      } else if (/^!\[.*\]\(.+\)$/.test(text)) {
+        const [, alt, src] = text.match(/^!\[(.*)\]\((.+)\)$/);
+        blocks.push({ type: "image", alt, src });
+      } else if (previous?.type === "paragraph") previous.text += ` ${text}`;
+      else blocks.push({ type: "paragraph", text });
+    }
+    return blocks.filter(Boolean);
+  }
+
+  function renderInline(text) {
+    return escapeHtml(text)
+      .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+      .replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, (_, label, href) => `<a href="${toSafeHref(href)}">${label}</a>`);
+  }
+
+  function renderProse(blocks) {
+    return blocks.map((block) => block.type === "list"
+      ? `<ul>${block.items.map((item) => `<li>${renderInline(item)}</li>`).join("")}</ul>`
+      : `<p>${renderInline(block.text)}</p>`).join("");
+  }
+
+  function renderTimelineEntry(entry) {
+    const [metaBlock, ...body] = splitIntoBlocks(entry.lines);
+    const metaParts = (metaBlock?.text ?? "").split(" · ");
+    const dateRange = metaParts.length > 1 ? metaParts.pop() : "";
+    const years = dateRange.match(/\d{4}/g) ?? [];
+    const shortRange = [...new Set(years)].join(" – ") + (/present/i.test(dateRange) ? " – now" : "");
+    return `<li>
+      <span class="when" title="${escapeHtml(dateRange)}">${escapeHtml(shortRange)}</span>
+      <div>
+        <h3>${renderInline(entry.title)}</h3>
+        <p class="org">${renderInline(metaParts.join(" · "))}</p>
+        <div class="prose">${renderProse(body)}</div>
+      </div>
+    </li>`;
+  }
+
+  function renderProject(entry) {
+    const [metaBlock, ...rest] = splitIntoBlocks(entry.lines);
+    const image = rest.find((block) => block.type === "image");
+    const stackBlock = rest.find((block) => block.type === "paragraph" && block.text.startsWith("**Tech Stack:**"));
+    const body = rest.filter((block) => block !== image && block !== stackBlock);
+    const stack = stackBlock?.text.replace("**Tech Stack:**", "").split(",").map((tech) => tech.trim()).join(" · ") ?? "";
+    const windowTitle = metaBlock?.text.match(/\[([^\]]+)\]/)?.[1] ?? entry.title;
+    const shot = image ? `<figure class="shot browser window">
+        <div class="titlebar" aria-hidden="true"><span class="lights"><i></i><i></i><i></i></span><span>${escapeHtml(windowTitle)}</span></div>
+        <img src="${escapeHtml(toSafeHref(image.src))}" alt="${escapeHtml(image.alt)}">
+      </figure>` : "";
+    return `<article class="project${image ? "" : " text-only"}">
+      <div>
+        <h3>${renderInline(entry.title)}</h3>
+        <p class="meta">${renderInline(metaBlock?.text ?? "")}</p>
+        <p class="stack">${escapeHtml(stack)}</p>
+        <div class="prose">${renderProse(body)}</div>
+      </div>
+      ${shot}
+    </article>`;
+  }
+
+  function showPortraitShotsAsDevices() {
+    for (const image of document.querySelectorAll(".project .shot img")) {
+      const applyShape = () => {
+        if (image.naturalHeight <= image.naturalWidth) return;
+        const figure = image.closest(".shot");
+        figure.className = "shot device";
+        figure.querySelector(".titlebar")?.remove();
+        figure.closest(".project").classList.add("phone");
+      };
+      if (image.complete) applyShape();
+      else image.addEventListener("load", applyShape, { once: true });
+    }
+  }
+
+  function renderCv(cv) {
+    const sectionEntries = (title) => cv.sections[title]?.entries ?? [];
+    const sectionBlocks = (title) => splitIntoBlocks(cv.sections[title]?.lines ?? []);
+    const contacts = (sectionBlocks("Contact").find((block) => block.type === "list")?.items ?? [])
+      .map((item) => item.match(/^([^:]+):\s*\[([^\]]+)\]\(([^)]+)\)/))
+      .filter(Boolean)
+      .map(([, label, text, href]) => ({ label, text, href: escapeHtml(toSafeHref(href)) }));
+
+    document.querySelector("h1").textContent = cv.name;
+    document.getElementById("headline").textContent = cv.headline;
+    document.getElementById("summary").innerHTML = renderInline(sectionBlocks("Professional Summary")[0]?.text ?? "");
+    document.getElementById("links").innerHTML = contacts
+      .map((contact, index) => `<a class="button${index === 0 ? " primary" : ""}" href="${contact.href}">${escapeHtml(contact.label)}</a>`)
+      .join("");
+    document.getElementById("timeline").innerHTML = [...sectionEntries("Work Experience"), ...sectionEntries("Education")]
+      .sort((first, second) => latestYear(second) - latestYear(first))
+      .map(renderTimelineEntry).join("");
+    document.getElementById("project-list").innerHTML = sectionEntries("Projects").map(renderProject).join("");
+    document.getElementById("contact-term").innerHTML += contacts
+      .map((contact) => `\n<span class="out">${escapeHtml(contact.label.toLowerCase().padEnd(9))}</span> <a href="${contact.href}">${escapeHtml(contact.text)}</a>`)
+      .join("");
+    showPortraitShotsAsDevices();
+  }
+
+  function latestYear(entry) {
+    const meta = entry.lines.find((line) => line.trim()) ?? "";
+    return /present/i.test(meta) ? Infinity : Math.max(0, ...(meta.match(/\d{4}/g) ?? []).map(Number));
+  }
+
+  function toSafeHref(href) {
+    return /^(https?:|mailto:|[\w./-]+$)/i.test(href) ? href : "#";
+  }
+
+  function escapeHtml(text) {
+    return text.replace(/[&<>"']/g, (character) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[character]);
+  }
+</script>
 </body>
 </html>
