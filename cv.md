@@ -6,7 +6,7 @@ Rules the site depends on:
 - "## " starts a section, "### " starts an entry inside it.
 - The first line under an entry heading is its meta line, parts separated by " · ".
   Experience/Education: last part is the date range.
-- Projects: "**Tech Stack:**" line lists tech, comma-separated. An image line adds a screenshot.
+- Projects: "**Tech Stack:**" line lists tech, comma-separated.
 - Contact: one "- Label: [text](url)" item per line.
 -->
 
@@ -76,7 +76,7 @@ Learned C# and JavaScript alongside software development best practices. Created
 
 ### Samsung Machine Learning Platform
 
-Internal tool · no public screenshots
+Internal tool
 
 **Tech Stack:** TypeScript, React.js, Node.js, MariaDB, Docker
 
@@ -94,8 +94,6 @@ Enterprise-grade internal machine learning platform designed for training and fi
 
 **Tech Stack:** JavaScript, React.js, Next.js, Node.js, Firebase, GCP
 
-![Rampver Online investment history page: a fund summary with shares and market value beside a table of approved and declined transactions.](img/rampver-dashboard.webp)
-
 Comprehensive digital investment platform for Rampver Financials, one of the Philippines' growing investment companies. The platform consists of three interconnected modules: a client-facing portal for investors to view portfolios, track performance, and request transactions; an administrative CMS for back-office operations; and an agent dashboard for financial advisors to manage client relationships. Built with a serverless architecture on Google Cloud Platform, featuring real-time data synchronization, secure document storage, and automated notification systems.
 
 **Key Contributions:**
@@ -110,8 +108,6 @@ Comprehensive digital investment platform for Rampver Financials, one of the Phi
 Progressive Web App · cinema staff
 
 **Tech Stack:** JavaScript, React.js, Material UI, Node.js, Express.js, MySQL
-
-![Vista Cinemas QR scanner sign-in screen with username, password and branch fields.](img/vista-scanner.webp)
 
 Progressive Web Application (PWA) developed for Vistamalls Cinema operations to digitize and streamline the ticket validation process. The application allows cinema staff to scan QR codes on digital or printed tickets, instantly validate authenticity against the booking database, and track theater occupancy in real-time. Designed to work offline with synchronization capabilities, ensuring continuous operation even during network interruptions.
 

@@ -10,7 +10,6 @@
 <meta property="og:title" content="Alex Cristi · Frontend Engineer">
 <meta property="og:description" content="Frontend engineer and part-lead at Samsung R&D Philippines.">
 <meta property="og:url" content="https://ajcristi.github.io/portfolio/">
-<meta property="og:image" content="https://ajcristi.github.io/portfolio/img/rampver-dashboard.webp">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -160,22 +159,10 @@
   .prose strong { font-weight: 600; }
   .status { margin: 0; font: 400 0.875rem/1.6 var(--mono); color: var(--muted); }
 
-  .project {
-    display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px; align-items: start;
-    padding-block: 40px; border-top: 1px solid var(--line);
-  }
+  .project { padding-block: 40px; border-top: 1px solid var(--line); }
   .project:first-child { border-top: 0; padding-top: 0; }
-  .project.text-only { grid-template-columns: minmax(0, 1fr); }
-  .project.phone { grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); }
-  .project .shot { position: sticky; top: 24px; }
   .stack { margin: 8px 0 0; font: 400 0.8125rem/1.6 var(--mono); color: var(--accent-text); }
   .meta { margin: 6px 0 0; font: 400 0.8125rem/1.6 var(--mono); color: var(--muted); }
-
-  .shot { margin: 0; }
-  .shot img { display: block; width: 100%; height: auto; }
-  .shot.browser .titlebar { height: 30px; }
-  .shot.device { justify-self: center; width: min(100%, 230px); }
-  .shot.device img { border: 1px solid var(--line-strong); border-radius: 18px; }
 
   .contact .term { line-height: 2; }
   .contact .term a { color: var(--text); }
@@ -193,9 +180,6 @@
     .button { padding-inline: 18px; }
     .contact .term { font-size: 0.75rem; }
     .timeline > li { grid-template-columns: 1fr; }
-    .project, .project.phone { grid-template-columns: minmax(0, 1fr); gap: 28px; }
-    .project.phone .shot { order: 1; }
-    .project .shot { position: static; }
   }
 </style>
 </head>
@@ -295,9 +279,6 @@
       else if (text.startsWith("- ")) {
         if (previous?.type === "list") previous.items.push(text.slice(2));
         else blocks.push({ type: "list", items: [text.slice(2)] });
-      } else if (/^!\[.*\]\(.+\)$/.test(text)) {
-        const [, alt, src] = text.match(/^!\[(.*)\]\((.+)\)$/);
-        blocks.push({ type: "image", alt, src });
       } else if (previous?.type === "paragraph") previous.text += ` ${text}`;
       else blocks.push({ type: "paragraph", text });
     }
@@ -334,38 +315,15 @@
 
   function renderProject(entry) {
     const [metaBlock, ...rest] = splitIntoBlocks(entry.lines);
-    const image = rest.find((block) => block.type === "image");
     const stackBlock = rest.find((block) => block.type === "paragraph" && block.text.startsWith("**Tech Stack:**"));
-    const body = rest.filter((block) => block !== image && block !== stackBlock);
+    const body = rest.filter((block) => block !== stackBlock);
     const stack = stackBlock?.text.replace("**Tech Stack:**", "").split(",").map((tech) => tech.trim()).join(" · ") ?? "";
-    const windowTitle = metaBlock?.text.match(/\[([^\]]+)\]/)?.[1] ?? entry.title;
-    const shot = image ? `<figure class="shot browser window">
-        <div class="titlebar" aria-hidden="true"><span class="lights"><i></i><i></i><i></i></span><span>${escapeHtml(windowTitle)}</span></div>
-        <img src="${escapeHtml(toSafeHref(image.src))}" alt="${escapeHtml(image.alt)}">
-      </figure>` : "";
-    return `<article class="project${image ? "" : " text-only"}">
-      <div>
-        <h3>${renderInline(entry.title)}</h3>
-        <p class="meta">${renderInline(metaBlock?.text ?? "")}</p>
-        <p class="stack">${escapeHtml(stack)}</p>
-        <div class="prose">${renderProse(body)}</div>
-      </div>
-      ${shot}
+    return `<article class="project">
+      <h3>${renderInline(entry.title)}</h3>
+      <p class="meta">${renderInline(metaBlock?.text ?? "")}</p>
+      <p class="stack">${escapeHtml(stack)}</p>
+      <div class="prose">${renderProse(body)}</div>
     </article>`;
-  }
-
-  function showPortraitShotsAsDevices() {
-    for (const image of document.querySelectorAll(".project .shot img")) {
-      const applyShape = () => {
-        if (image.naturalHeight <= image.naturalWidth) return;
-        const figure = image.closest(".shot");
-        figure.className = "shot device";
-        figure.querySelector(".titlebar")?.remove();
-        figure.closest(".project").classList.add("phone");
-      };
-      if (image.complete) applyShape();
-      else image.addEventListener("load", applyShape, { once: true });
-    }
   }
 
   function renderCv(cv) {
@@ -389,7 +347,6 @@
     document.getElementById("contact-term").innerHTML += contacts
       .map((contact) => `\n<span class="out">${escapeHtml(contact.label.toLowerCase().padEnd(9))}</span> <a href="${contact.href}">${escapeHtml(contact.text)}</a>`)
       .join("");
-    showPortraitShotsAsDevices();
   }
 
   function latestYear(entry) {
