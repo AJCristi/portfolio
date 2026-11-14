@@ -12,82 +12,23 @@ Rules the site depends on:
 
 # Alex Cristi
 
-Software Engineer · Customer Portals, Internal Tools & Web Apps
-
-## Contact
-
-- Email: [ajcristi96@gmail.com](mailto:ajcristi96@gmail.com)
-- GitHub: [github.com/AJCristi](https://github.com/AJCristi)
-- LinkedIn: [linkedin.com/in/alex-cristi-0bb9bb1a2](https://www.linkedin.com/in/alex-cristi-0bb9bb1a2/)
+Software Engineer · Customer Portals & Internal Tools
 
 ## Professional Summary
 
-I build customer portals, staff dashboards, and web apps for everyday business operations. I can take a project from the interface through to the API and database, or improve an existing app that’s become slow or hard to maintain.
-
-## Selected Experience
-
-### Frontend Software Engineer (Part-Lead)
-
-Samsung Research & Development Philippines · Taguig, Metro Manila · January 2022 – November 2025
-
-- Led frontend development of an internal machine learning platform used by multiple Samsung divisions to train LLMs
-- Migrated a large legacy JavaScript app to TypeScript and modern React, working with teams in Korea, Canada, the UK and Poland, with strict typing across every module
-- Cut initial load time by 40% on a legacy project with code splitting, lazy loading and caching, and took it to feature-complete
-- Served as the main point of contact between the overseas teams, QA, DevOps and UI/UX designers for releases, test coverage and design implementation
-- Contributed to shared component libraries, internal documentation and business tools used across the department
-- Interviewed frontend candidates on JavaScript, TypeScript and React, and onboarded and mentored new hires, including writing their training materials
-- Built several proof-of-concept features, some of which were approved for the product roadmap
-
-### Full Stack Software Engineer
-
-MobileGroup Inc. · Makati, Metro Manila · January 2020 – December 2021
-
-- Built and launched the Rampver Digital Investment Platform (client portal, admin CMS and agent dashboard) with React and Firebase, reaching 3,000+ active users in its first year
-- Rebuilt it from web-only into one Next.js and React Native codebase for iOS, Android and web, which cut development time for new features by 60%
-- Designed the Firestore schema on GCP for read-heavy, real-time use across all three modules while keeping financial transaction data consistent
-- Built the REST API on Cloud Functions for authentication, transaction processing and real-time notifications, running at 99.9% uptime
-- Built a ticket scanning app for Vistamalls Cinema staff (React, Material UI, Node.js) that halved queue times and doubled as a backup during hardware failures
-- Maintained a C# .NET POS-CMS for retail clients, adding payment integrations, inventory features and sales reports
-
-### Software Developer Intern
-
-Intercommerce Inc. · March – October 2018
-
-- Created working mockups of website designs using JavaScript, HTML, and CSS
-- Assisted in building an Android application in Java with a MySQL database
-
-## Education
-
-### BS Information Technology
-
-De La Salle – College of Saint Benilde · Specialization in Game Design and Development · 2019
-
-Studied C# and JavaScript. Capstone and thesis projects were both games.
-
-## Skills
-
-- **Languages:** JavaScript, TypeScript, SQL, C#
-- **Frameworks & Libraries:** React.js, React Native, Next.js, Redux, Node.js, Express.js, Material UI
-- **Backend & Cloud:** Firebase, Google Cloud Platform (GCP), Firebase Cloud Functions, Firestore, Docker
-- **Databases:** MariaDB, MySQL, NoSQL (Firestore)
-- **Methodologies:** Agile, Scrum, Kanban
+I build customer portals and web apps that help staff get through their day-to-day work. I can build the whole app, including the screens people use, the API, and the database. I also work on existing apps that have become slow or hard to maintain.
 
 ## Projects
 
-### Rampver Digital Investment Platform
+### Rampver Online
 
-[app.rampver.com](https://app.rampver.com)
+[Rampver Online](https://app.rampver.com/) · [Official app listing](https://play.google.com/store/apps/details?id=com.rampver.myapp)
 
 **Tech Stack:** JavaScript, React.js, Next.js, Node.js, Firebase, GCP
 
-The platform reached **3,000+ active users** in its first year. It gives investors a portal to track their portfolios and request transactions, with separate tools for back-office staff and financial advisors.
+Rampver Online lets investors open an account, invest in mutual funds and unit investment trust funds (UITFs), and track their portfolios on the web and on mobile.
 
-**My part:**
-
-- Frontend architecture in React.js with Redux
-- Real-time portfolio tracking with live market data
-- Document upload and KYC verification flows
-- Mobile-first responsive design
+At MobileGroup, I helped launch the investor portal, built tools for back-office staff and financial advisors, and worked on identity verification and live portfolio tracking. The platform reached **3,000+ active users in its first year**.
 
 ### Ticket Scanner for Vistamalls Cinema
 
@@ -95,14 +36,7 @@ Progressive Web App · cinema staff
 
 **Tech Stack:** JavaScript, React.js, Material UI, Node.js, Express.js, MySQL
 
-The app **cut queue times in half**. Cinema staff use it to scan digital or printed tickets, verify bookings, and monitor theater occupancy. It works offline and syncs when the connection comes back.
-
-**My part:**
-
-- QR scanning through the device camera, with manual entry as a fallback
-- Offline-first storage with background sync
-- Admin dashboard for occupancy and analytics
-- Took average ticket validation from 15 seconds to under 3
+The scanner **cut queue times in half** and brought average ticket validation from 15 seconds to under 3. Staff could scan printed or digital tickets with a device camera or enter a code by hand. I built the scanner to work offline and sync when the connection returned, and added a dashboard so staff could see how full each theater was.
 
 ### Samsung Machine Learning Platform
 
@@ -110,10 +44,58 @@ Internal tool
 
 **Tech Stack:** TypeScript, React.js, Node.js, MariaDB, Docker
 
-Internal platform for training and fine-tuning LLMs. Data scientists and ML engineers upload datasets, configure model parameters, watch training progress live and deploy models for inference. Used by multiple Samsung divisions and R&D teams.
+Several Samsung divisions used this internal tool to train and fine-tune large language models. I built parts of the interface that let teams upload and validate datasets, see how training was progressing, and share models and training settings.
 
-**My part:**
+## Selected Experience
 
-- Frontend dashboard for real-time training metrics
-- Drag-and-drop dataset upload with progress tracking and validation
-- Sharing of models and training configurations between teams
+### Frontend Software Engineer (Part-Lead)
+
+Samsung Research & Development Philippines · Taguig, Metro Manila · January 2022 – November 2025
+
+- Led frontend development for an internal machine learning platform used across several Samsung divisions.
+- Worked with teams in Korea, Canada, the UK, and Poland to move a large JavaScript app to modern React and TypeScript, with strict typing across all modules.
+- Finished the remaining features on a legacy app and cut its initial load time by 40% with code splitting, lazy loading, and caching.
+- Coordinated releases, test coverage, and design implementation with overseas engineering teams, QA, DevOps, and designers.
+- Contributed to shared component libraries, internal documentation, and tools used across the department.
+- Interviewed frontend candidates, wrote onboarding materials, and mentored new hires.
+- Prototyped features that earned a place on the product roadmap.
+
+### Full Stack Software Engineer
+
+MobileGroup Inc. · Makati, Metro Manila · January 2020 – December 2021
+
+- Built and launched Rampver’s investor portal, back-office CMS, and advisor dashboard with React and Firebase.
+- Moved Rampver from a web-only app to a shared Next.js and React Native codebase for web, iOS, and Android. That cut development time for new features by 60%.
+- Designed the Firestore database to handle frequent reads and live updates across all three tools while keeping transaction records consistent.
+- Built a Cloud Functions API for sign-in, transactions, and live notifications that ran at 99.9% uptime.
+- Built a ticket scanner that cinema staff could use to keep checking tickets when their hardware failed.
+- Added payment integrations, inventory features, and sales reports to a C# .NET point-of-sale system for retailers.
+
+### Software Developer Intern
+
+Intercommerce Inc. · March – October 2018
+
+- Turned website designs into working mockups with JavaScript, HTML, and CSS.
+- Helped build an Android app in Java with a MySQL database.
+
+## Education
+
+### BS Information Technology
+
+De La Salle – College of Saint Benilde · Specialization in Game Design and Development · 2019
+
+Studied C# and JavaScript and built games for both the capstone and thesis.
+
+## Skills
+
+- **Languages** — JavaScript, TypeScript, SQL, C#
+- **Frameworks and libraries** — React.js, React Native, Next.js, Redux, Node.js, Express.js, Material UI
+- **Cloud and infrastructure** — Google Cloud Platform, Firebase, Cloud Functions, Docker
+- **Databases** — Firestore, MariaDB, MySQL
+- **Team practices** — Agile, Scrum, Kanban
+
+## Contact
+
+- Email: [ajcristi96@gmail.com](mailto:ajcristi96@gmail.com)
+- GitHub: [github.com/AJCristi](https://github.com/AJCristi)
+- LinkedIn: [linkedin.com/in/alex-cristi-0bb9bb1a2](https://www.linkedin.com/in/alex-cristi-0bb9bb1a2/)
