@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Alex Cristi · Frontend Engineer</title>
-<meta name="description" content="Alex Cristi, frontend engineer and part-lead at Samsung R&D Philippines. React, TypeScript, Node.js and Google Cloud.">
+<title>Alex Cristi · Software Engineer</title>
+<meta name="description" content="Alex Cristi builds customer portals, staff dashboards, and web apps for small and midsize businesses.">
 <meta name="theme-color" content="#0f0f11">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Alex Cristi · Frontend Engineer">
-<meta property="og:description" content="Frontend engineer and part-lead at Samsung R&D Philippines.">
+<meta property="og:title" content="Alex Cristi · Software Engineer">
+<meta property="og:description" content="Alex Cristi builds customer portals, staff dashboards, and web apps for small and midsize businesses.">
 <meta property="og:url" content="https://ajcristi.github.io/portfolio/">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -188,14 +188,14 @@
   <header class="topbar">
     <a class="home" href="#top">alex@cristi:~</a>
     <nav aria-label="Sections">
-      <a href="#experience">experience</a>
       <a href="#projects">projects</a>
+      <a href="#experience">experience</a>
       <a href="#contact">contact</a>
     </nav>
   </header>
 
   <main id="top">
-    <h1 class="sr-only">Alex Cristi, frontend engineer</h1>
+    <h1 class="sr-only">Alex Cristi, software engineer</h1>
 
     <div class="window">
       <div class="titlebar" aria-hidden="true">
@@ -212,14 +212,14 @@
       <div class="actions" id="links"></div>
     </div>
 
-    <section id="experience" aria-labelledby="experience-title">
-      <h2 id="experience-title">Experience</h2>
-      <ol class="timeline" id="timeline"><li><p class="status">loading cv.md…</p></li></ol>
-    </section>
-
     <section id="projects" aria-labelledby="projects-title">
       <h2 id="projects-title">Projects</h2>
       <div id="project-list"><p class="status">loading cv.md…</p></div>
+    </section>
+
+    <section id="experience" aria-labelledby="experience-title">
+      <h2 id="experience-title">Selected Experience</h2>
+      <ol class="timeline" id="timeline"><li><p class="status">loading cv.md…</p></li></ol>
     </section>
 
     <section id="contact" class="contact" aria-labelledby="contact-title">
@@ -340,7 +340,7 @@
     document.getElementById("links").innerHTML = contacts
       .map((contact, index) => `<a class="button${index === 0 ? " primary" : ""}" href="${contact.href}">${escapeHtml(contact.label)}</a>`)
       .join("");
-    document.getElementById("timeline").innerHTML = [...sectionEntries("Work Experience"), ...sectionEntries("Education")]
+    document.getElementById("timeline").innerHTML = [...sectionEntries("Selected Experience"), ...sectionEntries("Education")]
       .sort((first, second) => latestYear(second) - latestYear(first))
       .map(renderTimelineEntry).join("");
     document.getElementById("project-list").innerHTML = sectionEntries("Projects").map(renderProject).join("");

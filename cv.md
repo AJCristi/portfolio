@@ -1,7 +1,7 @@
 <!--
 This file is the website's content. index.html reads it at runtime.
 Rules the site depends on:
-- Keep the section titles: Contact, Professional Summary, Work Experience, Education, Projects.
+- Keep the section titles: Contact, Professional Summary, Selected Experience, Education, Projects.
 - The line under "# Name" is the headline.
 - "## " starts a section, "### " starts an entry inside it.
 - The first line under an entry heading is its meta line, parts separated by " · ".
@@ -12,7 +12,7 @@ Rules the site depends on:
 
 # Alex Cristi
 
-Frontend Software Engineer (Part-Lead) · Samsung R&D Philippines · Manila, Philippines
+Software Engineer · Customer Portals, Internal Tools & Web Apps
 
 ## Contact
 
@@ -22,32 +22,32 @@ Frontend Software Engineer (Part-Lead) · Samsung R&D Philippines · Manila, Phi
 
 ## Professional Summary
 
-Full Stack Software Engineer with 5+ years of experience building and scaling web applications. Currently part-leading a frontend team at Samsung R&D Philippines, where I spearhead a large-scale internal platform used for training LLMs across multiple divisions. Proven track record in delivering end-to-end solutions from architecting NoSQL databases on GCP to developing multi-platform applications with React, TypeScript, and Node.js.
+I build customer portals, staff dashboards, and web apps for everyday business operations. I can take a project from the interface through to the API and database, or improve an existing app that’s become slow or hard to maintain.
 
-## Work Experience
+## Selected Experience
 
 ### Frontend Software Engineer (Part-Lead)
 
-Samsung Research & Development Philippines · Taguig, Metro Manila · January 2022 – Present
+Samsung Research & Development Philippines · Taguig, Metro Manila · January 2022 – November 2025
 
-- **Frontend modernization:** Collaborated with overseas counterparts (Korea, CAN, UK, PL) and local teams to migrate a large-scale legacy JavaScript application to TypeScript using modern React patterns, improving code maintainability and reducing runtime errors by establishing strict type safety across all modules and components
-- **Enterprise ML platform:** Spearheaded frontend development for an internal machine learning platform now utilized by multiple Samsung divisions for training Large Language Models (LLMs) across various AI/ML projects including natural language processing and computer vision applications
-- **Optimized legacy system performance:** Maintained and upgraded a legacy project to feature-complete status, implementing code splitting, lazy loading, and caching strategies that resulted in 40% faster initial load times and significantly enhanced application stability
-- **Cross-functional coordination:** Served as primary liaison between international development teams (Korea, CAN, UK, PL), QA engineers, DevOps, and UI/UX designers, ensuring seamless deployment pipelines, comprehensive test coverage, and pixel-perfect design implementation
-- **Built internal tooling:** Contributed to department-wide initiatives including shared component libraries, internal documentation systems, and localized business tools that improved developer productivity across teams
-- **Talent acquisition & mentorship:** Conducted technical recruitment interviews, evaluating candidates on JavaScript/TypeScript proficiency and React expertise. Mentored and onboarded new team members, creating training materials and conducting knowledge transfer sessions
-- **Innovation & prototyping:** Developed multiple Proof-of-Concept features exploring new technologies and user experience improvements, several of which were approved and integrated into the production product roadmap
+- Led frontend development of an internal machine learning platform used by multiple Samsung divisions to train LLMs
+- Migrated a large legacy JavaScript app to TypeScript and modern React, working with teams in Korea, Canada, the UK and Poland, with strict typing across every module
+- Cut initial load time by 40% on a legacy project with code splitting, lazy loading and caching, and took it to feature-complete
+- Served as the main point of contact between the overseas teams, QA, DevOps and UI/UX designers for releases, test coverage and design implementation
+- Contributed to shared component libraries, internal documentation and business tools used across the department
+- Interviewed frontend candidates on JavaScript, TypeScript and React, and onboarded and mentored new hires, including writing their training materials
+- Built several proof-of-concept features, some of which were approved for the product roadmap
 
 ### Full Stack Software Engineer
 
 MobileGroup Inc. · Makati, Metro Manila · January 2020 – December 2021
 
-- **Architected multi-platform investment solution:** Spearheaded the complete architectural redesign of the 'Rampver Digital Investment Platform', transitioning from a web-only solution to a unified codebase supporting iOS, Android, and web using Next.js and React Native, reducing development time for new features by 60%
-- **Delivered high-impact fintech product:** Developed and launched a comprehensive Digital Investment Platform for Rampver Financials, consisting of 3 interconnected modules (Client Portal, Admin CMS, Agent Dashboard) built with React.js and Firebase, successfully onboarding 3,000+ active users within the first year
-- **Designed scalable database architecture:** Devised and implemented a NoSQL database schema using Firebase Firestore on Google Cloud Platform, optimizing for high-read scenarios and real-time data synchronization across all platform modules while maintaining data integrity for financial transactions
-- **Built serverless API infrastructure:** Created and deployed a robust RESTful API layer using GCP Cloud Functions and Firebase Cloud Functions, handling authentication, transaction processing, and real-time notifications with 99.9% uptime
-- **Developed operational efficiency tools:** Built a ticket scanning application for Vistamalls Cinema employees using React.js, Material UI, and Node.js backend, streamlining ticket validation processes, reducing queue times by 50%, and serving as a reliable backup system during hardware failures
-- **Maintained enterprise POS systems:** Upgraded and maintained a C# .NET POS-CMS system for notable retail clients, implementing new payment integrations, inventory management features, and generating detailed sales analytics reports
+- Built and launched the Rampver Digital Investment Platform (client portal, admin CMS and agent dashboard) with React and Firebase, reaching 3,000+ active users in its first year
+- Rebuilt it from web-only into one Next.js and React Native codebase for iOS, Android and web, which cut development time for new features by 60%
+- Designed the Firestore schema on GCP for read-heavy, real-time use across all three modules while keeping financial transaction data consistent
+- Built the REST API on Cloud Functions for authentication, transaction processing and real-time notifications, running at 99.9% uptime
+- Built a ticket scanning app for Vistamalls Cinema staff (React, Material UI, Node.js) that halved queue times and doubled as a backup during hardware failures
+- Maintained a C# .NET POS-CMS for retail clients, adding payment integrations, inventory features and sales reports
 
 ### Software Developer Intern
 
@@ -62,31 +62,17 @@ Intercommerce Inc. · March – October 2018
 
 De La Salle – College of Saint Benilde · Specialization in Game Design and Development · 2019
 
-Learned C# and JavaScript alongside software development best practices. Created 2 games as capstone and thesis projects.
+Studied C# and JavaScript. Capstone and thesis projects were both games.
 
 ## Skills
 
-- **Languages:** JavaScript, TypeScript, SQL
-- **Frameworks & Libraries:** React.js, Next.js, Node.js, Express.js, Material UI
-- **Backend & Cloud:** Firebase, Google Cloud Platform (GCP), Firebase Cloud Functions, Firestore
+- **Languages:** JavaScript, TypeScript, SQL, C#
+- **Frameworks & Libraries:** React.js, React Native, Next.js, Redux, Node.js, Express.js, Material UI
+- **Backend & Cloud:** Firebase, Google Cloud Platform (GCP), Firebase Cloud Functions, Firestore, Docker
 - **Databases:** MariaDB, MySQL, NoSQL (Firestore)
 - **Methodologies:** Agile, Scrum, Kanban
 
 ## Projects
-
-### Samsung Machine Learning Platform
-
-Internal tool
-
-**Tech Stack:** TypeScript, React.js, Node.js, MariaDB, Docker
-
-Enterprise-grade internal machine learning platform designed for training and fine-tuning Large Language Models (LLMs). The platform provides an intuitive interface for data scientists and ML engineers to upload training datasets, configure model parameters, monitor training progress in real-time, and deploy models for inference. Currently utilized by multiple Samsung divisions and R&D teams for natural language processing, sentiment analysis, and conversational AI projects. Features include batch processing, experiment tracking, model versioning, and integration with Samsung's internal cloud infrastructure.
-
-**Key Contributions:**
-
-- Architected the frontend dashboard for real-time training metrics visualization
-- Implemented drag-and-drop dataset upload with progress tracking and validation
-- Built collaborative features allowing teams to share models and training configurations
 
 ### Rampver Digital Investment Platform
 
@@ -94,14 +80,14 @@ Enterprise-grade internal machine learning platform designed for training and fi
 
 **Tech Stack:** JavaScript, React.js, Next.js, Node.js, Firebase, GCP
 
-Comprehensive digital investment platform for Rampver Financials, one of the Philippines' growing investment companies. The platform consists of three interconnected modules: a client-facing portal for investors to view portfolios, track performance, and request transactions; an administrative CMS for back-office operations; and an agent dashboard for financial advisors to manage client relationships. Built with a serverless architecture on Google Cloud Platform, featuring real-time data synchronization, secure document storage, and automated notification systems.
+The platform reached **3,000+ active users** in its first year. It gives investors a portal to track their portfolios and request transactions, with separate tools for back-office staff and financial advisors.
 
-**Key Contributions:**
+**My part:**
 
-- Designed and implemented the complete frontend architecture using React.js with Redux state management
-- Built real-time portfolio tracking with live market data integration
-- Developed secure document upload and KYC verification workflows
-- Created responsive mobile-first design serving 3,000+ active investors
+- Frontend architecture in React.js with Redux
+- Real-time portfolio tracking with live market data
+- Document upload and KYC verification flows
+- Mobile-first responsive design
 
 ### Ticket Scanner for Vistamalls Cinema
 
@@ -109,11 +95,25 @@ Progressive Web App · cinema staff
 
 **Tech Stack:** JavaScript, React.js, Material UI, Node.js, Express.js, MySQL
 
-Progressive Web Application (PWA) developed for Vistamalls Cinema operations to digitize and streamline the ticket validation process. The application allows cinema staff to scan QR codes on digital or printed tickets, instantly validate authenticity against the booking database, and track theater occupancy in real-time. Designed to work offline with synchronization capabilities, ensuring continuous operation even during network interruptions.
+The app **cut queue times in half**. Cinema staff use it to scan digital or printed tickets, verify bookings, and monitor theater occupancy. It works offline and syncs when the connection comes back.
 
-**Key Contributions:**
+**My part:**
 
-- Built QR code scanning functionality using device cameras with fallback manual entry
-- Implemented offline-first architecture with background sync for unreliable network conditions
-- Created admin dashboard for real-time occupancy monitoring and analytics
-- Reduced average ticket validation time from 15 seconds to under 3 seconds
+- QR scanning through the device camera, with manual entry as a fallback
+- Offline-first storage with background sync
+- Admin dashboard for occupancy and analytics
+- Took average ticket validation from 15 seconds to under 3
+
+### Samsung Machine Learning Platform
+
+Internal tool
+
+**Tech Stack:** TypeScript, React.js, Node.js, MariaDB, Docker
+
+Internal platform for training and fine-tuning LLMs. Data scientists and ML engineers upload datasets, configure model parameters, watch training progress live and deploy models for inference. Used by multiple Samsung divisions and R&D teams.
+
+**My part:**
+
+- Frontend dashboard for real-time training metrics
+- Drag-and-drop dataset upload with progress tracking and validation
+- Sharing of models and training configurations between teams
