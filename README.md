@@ -9,3 +9,5 @@ python -m http.server 4173
 ```
 
 GitHub Pages serves the repo root from `main`.
+
+[Download the portfolio QR code](portfolio-qr.png).

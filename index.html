@@ -168,11 +168,17 @@
   .contact .term a { color: var(--text); }
 
   footer {
+    display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end;
+    gap: 24px;
     margin-top: clamp(72px, 12vw, 120px);
     padding-block: 28px 40px;
     border-top: 1px solid var(--line);
     font: 400 0.8125rem/1.6 var(--mono); color: var(--muted);
   }
+  .portfolio-qr { margin: 0; }
+  .portfolio-qr a { display: inline-block; vertical-align: top; }
+  .portfolio-qr img { display: block; border-radius: 6px; }
+  .portfolio-qr figcaption { margin-top: 8px; }
 
   @media (max-width: 720px) {
     .topbar { flex-wrap: wrap; font-size: 0.8125rem; }
@@ -235,7 +241,13 @@
     <noscript><p class="status">This page renders from <a href="cv.md">cv.md</a>, which needs JavaScript. Read it directly instead.</p></noscript>
   </main>
 
-  <footer>© 2026 Alex Cristi · Manila, Philippines</footer>
+  <footer>
+    <span>© 2026 Alex Cristi · Manila, Philippines</span>
+    <figure class="portfolio-qr">
+      <a href="portfolio-qr.png"><img src="portfolio-qr.png" width="170" height="170" loading="lazy" alt="View full-size portfolio QR code"></a>
+      <figcaption>Scan to open on another device</figcaption>
+    </figure>
+  </footer>
 </div>
 <script type="module">
   try {
